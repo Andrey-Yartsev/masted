@@ -1,0 +1,96 @@
+body
+  margin: 0
+  background: #999EAE
+  font-family: Arial
+  color: #fff
+
+#app
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+.logo
+  max-width: 700px
+  position: relative
+  margin-top: -50px
+.txt
+  font-size: 14px
+  top: 300px
+  width: 100%
+  position: absolute
+  z-index: 2
+  background: rgba(0, 0, 0, 0.1)
+  padding-top: 30px
+  padding-bottom: 20px
+  display: flex
+  justify-content: center
+  .c
+    max-width: 800px
+    ul.proj
+      li
+        display: flex
+        justify-content: space-between
+        & span:first-child
+          flex-grow: 4
+        & > span
+          display: flex
+        & > span > span:first-child
+          flex-grow: 1
+        & > span > span:last-child
+          flex-grow: 10
+      .github
+        padding-left: 20px
+        img
+          width: 30px
+
+  a
+    color: #fff
+  ul
+    margin: 0
+    padding: 30px
+  li
+    list-style: none
+    margin-bottom: 20px
+    display: flex
+    align-items: center
+  img
+    max-width: 100px
+    margin-right: 20px
+.bg
+  border-bottom: 2px solid #999EAE
+  position: absolute
+  bottom: -1px
+  background: url(../img/bg.png)
+  width: 100%
+  height: 100px
+video
+  margin: 0
+  width: 100%
+  display: block
+  margin-top: -20px
+
+@media screen and (max-width: 600px)
+  .logo
+    margin-top: -10px
+  .txt
+    top: 220px
+@media screen and (max-width: 400px)
+  .logo
+    margin-top: 0
+  .txt
+    top: 180px
+    font-size: 10px
+    .c
+      .thumb
+        img
+          width: 50px
+      ul.proj
+        .github
+          padding-left: 20px
+          img
+            width: 15px
+
+@media screen and (max-width: 600px)
+  .c
+    max-width: 100% !important
