@@ -22,12 +22,13 @@
       <swiper
           :slides-per-view="3"
           :space-between="0"
+          ref="swiper"
       >
         <swiper-slide
             v-for="v in rutube"
             :key="v.id"
             @click="showVideo(v.id)"
-            :class="{ selected: v.id === id}"
+            :class="{ selected: v.id === id, isSah: v.isSah}"
         >{{ v.title }}</swiper-slide>
       </swiper>
     </div>
@@ -65,10 +66,13 @@ export default {
   },
   computed: {
     rutube() {
-      return rutube
+      return rutube()
     },
     id() {
       return this.$route.params.id
+    },
+    isSah() {
+      return true
     }
   },
   methods: {
