@@ -25,5 +25,19 @@ export default () => {
       id: 'dc04e5b350e3fb56a61f1f0d5f5d347c',
       isSah: true
     },
+    {
+      title: 'Ищем веб-студии на Сахалине',
+      id: 'f985b80236d66bf5d43ae9517afd0e2c',
+      isSah: true
+    },
+    {
+      title: 'Сахалин - технологии',
+      id: '487498a8b4de7654d706f638e53c40e8',
+      isSah: true
+    },
+    {
+      title: 'Прогулки по сайтам. Юг',
+      id: '77950ebc223e29d5e076d04796eb689e'
+    }
   ].reverse()
 }

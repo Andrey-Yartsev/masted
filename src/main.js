@@ -8,6 +8,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 const routes = [
   { path: '/', name: 'home', component: Main },
   { path: '/rutube/:id', name: 'rutube', component: Main },
+  { path: '/rutube-open', name: 'rutube-open', component: Main },
 ]
 
 const router = createRouter({

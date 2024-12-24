@@ -1,8 +1,5 @@
 <template>
-  <!--
--->
   <div class="rutube" ref="rutube">
-
     <ul :class="{ hide: hideRutubeInitLink, remove: removeRutubeInitLink }">
       <li>
         <span>
@@ -71,6 +68,9 @@ export default {
     id() {
       return this.$route.params.id
     },
+    rutubeOpen() {
+      return this.$route.name === 'rutube-open'
+    },
     isSah() {
       return true
     }
@@ -85,10 +85,11 @@ export default {
           this.removeRutubeInitLink = false
           this.hideRutubeInitLink = false
           this.$emit('cancel')
+          this.$router.push('/')
         }, 1000)
       }, this.isShowVideo ? 1000 : 100)
     },
-    scrollToRutube(id) {
+    scrollToRutube() {
       this.$smoothScroll({
         scrollTo: this.$refs.rutube,
         duration: 1000
@@ -106,6 +107,20 @@ export default {
       this.isShowVideo = true
       this.videoId = id
       this.$router.push('/rutube/' + id)
+    }
+  },
+  mounted() {
+    if (this.rutubeOpen) {
+      this.scrollToRutube()
+      setTimeout(() => {
+        this.showVideo(this.rutube[0].id)
+      }, 2000)
+    }
+    if (this.id) {
+      this.scrollToRutube()
+      setTimeout(() => {
+        this.showVideo(this.id)
+      }, 2000)
     }
   }
 }
